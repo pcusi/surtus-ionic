@@ -1,0 +1,7 @@
+{
+  "name": "surtus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
