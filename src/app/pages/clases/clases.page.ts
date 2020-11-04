@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Clase } from 'src/app/models/Clases';
 import { ClassService } from 'src/app/services/class.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { ClassService } from 'src/app/services/class.service';
   styleUrls: ['./clases.page.scss'],
 })
 export class ClasesPage implements OnInit {
+
+  public clases: Clase[] = [];
 
   constructor(
     private _ar: ActivatedRoute,
@@ -23,7 +26,7 @@ export class ClasesPage implements OnInit {
 
   getClassByModuleId(id) {
     this._c.getClassByModuleId(id).subscribe(data => {
-      console.log(data);
+      this.clases = data.clases;
     });
   }
 
