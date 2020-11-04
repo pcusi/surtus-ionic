@@ -1,0 +1,54 @@
+.menu-image {
+    background-image: url('../../../assets/images/surtus-one.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: calc(40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .menu-search {
+        position: relative;
+        top: 85px;
+        background: none;
+        --background: #fff;
+        --color: #121212;
+        width: 80%;
+        --border-radius: 15px;
+    }
+
+}
+
+.challenge-section {
+    padding: 1rem;
+
+    .challenge-add {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100px;
+        background: linear-gradient(90deg, #00D2FF 0%, #3A7BD5 100%);
+        border-radius: 25px;
+
+        .add-icon {
+            color: white;
+            font-size: 3em;
+        }
+
+        .add-text {
+            margin: 2px 0;
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+}

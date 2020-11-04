@@ -1,0 +1,25 @@
+<ion-content>
+  <app-menu></app-menu>
+  <div class="home-content">
+    <h6>¿Qué quieres aprender?</h6>
+    <ion-grid class="home-grid">
+      <ion-row>
+        <ion-col size="12" class="home-col" *ngFor="let i of modules">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="inside-col">
+                <h2>{{i.name}}</h2>
+                <button class="button-col" [routerLink]="['/clases', i.idMod]">
+                  Aprender
+                </button>
+              </ion-col>
+              <ion-col size="6" class="inside-img">
+                <img src="{{i.image}}" class="home-image">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

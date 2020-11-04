@@ -1,0 +1,40 @@
+<ion-menu-toggle>
+  <ion-menu side="start" contentId="my-main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let i of opts | async">
+        <div class="menu-items">
+          <ion-item>
+            {{i.names}}
+          </ion-item>
+          <ion-button [routerLink]="i.redirect">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-menu-toggle>
+
+<div class="waves">
+</div>
+<!-- contenedor header -->
+<div class="menu-content">
+  <ion-icon name="menu-outline" class="menu-icon" (click)="toggleMenu();"></ion-icon>
+  <div class="media">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <div class="media-body">
+        <ion-label class="media-label">Invitado</ion-label>
+        <small class="media-small">Nivel: Básico</small>
+      </div>
+    </ion-item>
+  </div>
+</div>
+<!-- termina contenedor header -->

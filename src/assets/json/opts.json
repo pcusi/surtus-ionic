@@ -1,0 +1,14 @@
+[
+    {
+        "names": "Módulos",
+        "redirect": "/modulos"
+    },
+    {
+        "names": "Retos",
+        "redirect": "/retos"
+    },
+    {
+        "names": "¿Cómo ser intérprete?",
+        "redirect": "/guia"
+    }
+]
