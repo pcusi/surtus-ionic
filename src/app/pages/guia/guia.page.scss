@@ -1,0 +1,19 @@
+.guia-toolbar {
+  --background: #1488CC;
+  ion-title {
+    --color: white;
+    --font-weight: bold;
+  }
+}
+
+.guia-container {
+  padding: 1em;
+  p {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .guia-btn {
+    --background: #1488cc;
+    --color: white;
+  }
+}

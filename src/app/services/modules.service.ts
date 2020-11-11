@@ -13,4 +13,5 @@ export class ModulesService {
   getModules() {
     return this._o.getRequest('/modules');
   }
+
 }

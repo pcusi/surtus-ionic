@@ -1,7 +1,7 @@
 [
     {
-        "names": "Módulos",
-        "redirect": "/modulos"
+        "names": "Principal",
+        "redirect": "/"
     },
     {
         "names": "Retos",

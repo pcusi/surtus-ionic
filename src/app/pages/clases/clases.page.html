@@ -1,12 +1,15 @@
 <ion-content>
   <app-menu></app-menu>
   <div class="modules-content">
-    <h3>Abecedario</h3>
+    <h3>{{title}}</h3>
     <ion-grid class="classes">
       <ion-row class="classes-row">
         <ion-col size="6" *ngFor="let i of clases" class="classes-col">
-          <img src="{{i.image}}" class="class-img">
+          <ion-img src="{{i.image}}" width="80" height="80"></ion-img>
           <h2 class="class-name">{{i.name}}</h2>
+          <ion-button (click)="startVideo(i.video)" *ngIf="i.video != ''">
+            <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

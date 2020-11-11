@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RetosPageRoutingModule } from './retos-routing.module';
 
 import { RetosPage } from './retos.page';
+import {MenuComponent} from '../../shared/menu/menu.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { RetosPage } from './retos.page';
     IonicModule,
     RetosPageRoutingModule
   ],
-  declarations: [RetosPage]
+  declarations: [RetosPage, MenuComponent]
 })
 export class RetosPageModule {}

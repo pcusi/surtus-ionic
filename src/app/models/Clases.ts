@@ -5,6 +5,7 @@ export class Clase {
         public image: string,
         public percent?: number,
         public idMod?: number,
-        public idCla?: number
+        public idCla?: number,
+        public titulo?: string
     ) { }
 }

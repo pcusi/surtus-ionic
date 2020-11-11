@@ -3,6 +3,10 @@
     top: 55px;
     padding: 0 1.5rem;
 
+    h3 {
+        font-weight: bold;
+    }
+
     .classes {
         margin-top: 25px;
         padding: 0;
@@ -15,15 +19,14 @@
             align-items: center;
 
             .class-img {
-                width: 100%;
-                height: 75%;
-                margin: auto;
+                min-width: 100%;
+                min-height: 100%;
             }
 
             .class-name {
                 text-align: center;
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
         }
     }

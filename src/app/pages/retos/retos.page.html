@@ -1,15 +1,41 @@
+<ion-menu-toggle>
+  <ion-menu side="start" contentId="my-main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let i of opts | async">
+        <div class="menu-items">
+          <ion-item>
+            {{i.names}}
+          </ion-item>
+          <ion-button [routerLink]="i.redirect">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-menu-toggle>
+
 <ion-content color="light">
   <div class="menu-image">
+    <div class="menu">
+      <ion-icon name="menu-outline" class="menu-icon" (click)="toggleMenu();"></ion-icon>
+    </div>
     <h1>SURTUS</h1>
     <ion-searchbar class="menu-search"></ion-searchbar>
   </div>
   <div class="challenge-section">
     <ion-text color="dark">
-      <h6>Agregar nuevo reto</h6>
+      <h3>Agregar nuevo reto</h3>
     </ion-text>
     <div class="challenge-add">
       <ion-icon name="add-outline" class="add-icon"></ion-icon>
       <h6 class="add-text">Crear reto</h6>
     </div>
   </div>
+
 </ion-content>

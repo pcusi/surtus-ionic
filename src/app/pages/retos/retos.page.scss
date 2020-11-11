@@ -1,3 +1,23 @@
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    ion-item {
+        --border-color: none;
+        --border: none;
+        --inner-border-width: 0px;
+    }
+
+    ion-button {
+        --background: none;
+        --color: black;
+        --box-shadow: none;
+        --font-size: 2em;
+    }
+}
+
 .menu-image {
     background-image: url('../../../assets/images/surtus-one.jpg');
     background-size: cover;
@@ -8,6 +28,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .menu {
+
+        .menu-icon {
+            position: relative;
+            left: -140px;
+            font-weight: bold;
+            font-size: 3em;
+            color: white;
+        }
+    }
+
 
     h1 {
         text-align: center;
@@ -28,9 +60,12 @@
 }
 
 .challenge-section {
+    position: relative;
     padding: 1rem;
+    top: 15px;
 
     .challenge-add {
+        margin: 1rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
