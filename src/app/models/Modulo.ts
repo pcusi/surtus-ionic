@@ -3,6 +3,7 @@ export class Modulo {
         public name: string,
         public level: string,
         public image?: string,
-        public idMod?: number
+        public idMod?: number,
+        public is_locked?: number
     ) { }
 }

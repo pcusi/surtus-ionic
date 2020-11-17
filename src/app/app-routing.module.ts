@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'principal',
+    redirectTo: 'onboarding',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/retos/retos.module').then( m => m.RetosPageModule)
   },
   {
-    path: 'modulos',
+    path: 'modulos/:level',
     loadChildren: () => import('./pages/modulos/modulos.module').then( m => m.ModulosPageModule)
   },
   {
@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'guia',
     loadChildren: () => import('./pages/guia/guia.module').then( m => m.GuiaPageModule)
+  },
+  {
+    path: 'onboarding',
+    loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
   },
 ];
 

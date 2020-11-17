@@ -1,11 +1,15 @@
 [
     {
         "names": "Principal",
-        "redirect": "/"
+        "redirect": "/principal"
     },
     {
         "names": "Retos",
         "redirect": "/retos"
+    },
+    {
+        "names": "Glosario",
+        "redirect": "/modulos"
     },
     {
         "names": "¿Cómo ser intérprete?",

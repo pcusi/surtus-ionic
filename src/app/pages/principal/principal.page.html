@@ -1,15 +1,20 @@
 <ion-content>
   <app-menu></app-menu>
   <div class="home-content">
-    <h6>¿Qué quieres aprender?</h6>
+
+    <ion-searchbar class="menu-search" placeholder="¿Qué quieres aprender?"></ion-searchbar>
+
+    <h1>Sugerencias</h1>
+
     <ion-grid class="home-grid">
+<!--      -->
       <ion-row>
-        <ion-col size="12" class="home-col" *ngFor="let i of modules">
+        <ion-col size="12" class="home-col" *ngFor="let i of modules | slice: 0:1">
           <ion-grid>
             <ion-row>
               <ion-col size="6" class="inside-col">
-                <h2>{{i.name}}</h2>
-                <button class="button-col" [routerLink]="['/clases', i.idMod]">
+                <h1>Nivel {{i.level}}</h1>
+                <button class="button-col" [routerLink]="['/modulos/', i.level]">
                   Aprender
                 </button>
               </ion-col>
@@ -21,5 +26,31 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+
+<!--  termina  -->
+  <h5>¿Quieres retar tu capacidad como intérprete?</h5>
+  <h4>Completa al menos un 30% de un módulo que hayas visualizado.</h4>
+
+<!-- slides card retos archivados -->
+    <ion-grid class="ion-wrap">
+      <ion-row class="history-modules">
+        <ion-col  class="history-col">
+          <p>Abecedario</p>
+        </ion-col>
+        <ion-col class="history-col">
+          <p>Saludos</p>
+        </ion-col>
+        <ion-col class="history-col">
+          <p>Modales</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<!-- termina slides card -->
+    <h3>Marcador personal</h3>
+    <div class="marcador">
+      <h1>Abecedario</h1>
+      <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+      <p>Última vez realizado 12/10/20 a las 13:33 pm</p>
+    </div>
   </div>
 </ion-content>

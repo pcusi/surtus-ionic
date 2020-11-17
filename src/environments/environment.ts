@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  api: 'https://api-surtus.herokuapp.com/api/v1'
+  api: 'https://api-surtus.herokuapp.com/api/v1',
+  apiTest: 'http://localhost:4000/api/v1'
 };
+
+// echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -15,24 +15,24 @@ export class OtherService {
 
   postRequest(params: any, body?: any): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this._http.post(environment.api + params, body, { headers });
+    return this._http.post(environment.apiTest + params, body, { headers });
   }
 
   getRequest(params: any): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this._http.get(environment.api + params, { headers });
+    return this._http.get(environment.apiTest + params, { headers });
   }
 
   postToken(params: any, token?: string, body?: any,): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${token}`);
-    return this._http.post(environment.api + params, body, { headers });
+    return this._http.post(environment.apiTest + params, body, { headers });
   }
 
   putToken(params: any, token?: string): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${token}`);
-    return this._http.get(environment.api + params, { headers });
+    return this._http.get(environment.apiTest + params, { headers });
   }
 
 }
