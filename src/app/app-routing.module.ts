@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'onboarding',
     loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
   },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
+    path: 'glosario',
+    loadChildren: () => import('./pages/glosario/glosario.module').then( m => m.GlosarioPageModule)
+  },
 ];
 
 @NgModule({

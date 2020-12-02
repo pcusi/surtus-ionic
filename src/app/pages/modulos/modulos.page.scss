@@ -1,7 +1,5 @@
 .modules-content {
-  position: relative;
-  top: 55px;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
 
   h3 {
     font-weight: bold;
@@ -10,30 +8,20 @@
   .modules-list {
     background: linear-gradient(90deg, #397FD6 0%, #74ADFF 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
     .modules-icon {
       width: 24px;
       height: 24px;
+      align-items: start !important;
     }
     .module-name {
       text-align: center;
       font-weight: bold;
       color: white;
-    }
-  }
-  // else col is locked
-  .modules-list-locked {
-    background: linear-gradient(90deg, #eee 0%, #ccc 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    .modules-icon {
-      width: 24px;
-      height: 24px;
-    }
-    .module-name {
       text-align: center;
-      font-weight: bold;
-      color: white;
     }
   }
 }
+
+

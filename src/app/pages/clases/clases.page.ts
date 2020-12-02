@@ -1,10 +1,13 @@
 /* tslint:disable */
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { Clase } from 'src/app/models/Clases';
 import { ClassService } from 'src/app/services/class.service';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
-import { Platform } from '@ionic/angular';
+import {MenuController, Platform} from '@ionic/angular';
+import {MenuService} from "../../services/menu.service";
+import {Observable} from "rxjs";
+import {Menu} from "../../models/menu";
 
 @Component({
   selector: 'app-clases',
@@ -15,12 +18,16 @@ export class ClasesPage implements OnInit {
 
   public clases: Clase[] = [];
   public title: any;
+  opts: Observable<Menu[]>;
 
   constructor(
     private _ar: ActivatedRoute,
     private _c: ClassService,
     private _v: VideoPlayer,
-    private platform: Platform
+    private platform: Platform,
+    private menu: MenuController,
+    private _menu: MenuService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -28,6 +35,7 @@ export class ClasesPage implements OnInit {
       let id = params.id;
       this.getClassByModuleId(id);
     });
+    this.opts = this._menu.getMenu();
   }
 
   getClassByModuleId(id) {
@@ -47,5 +55,13 @@ export class ClasesPage implements OnInit {
     } else {
       console.log('No cordova')
     }
+  }
+
+  toggleMenu() {
+    this.menu.toggle();
+  }
+
+  redirectTo(item: string) {
+    this.router.navigate([item]);
   }
 }

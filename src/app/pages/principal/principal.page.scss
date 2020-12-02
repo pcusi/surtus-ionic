@@ -91,10 +91,18 @@
         border: 1px solid #C4C4C4;
         box-sizing: border-box;
         margin: 1rem 0;
-        padding: 0.5rem;
+        padding: 0 1rem;
         border-radius: 30px;
+        h1 {
+            margin: 12px 0;
+            color: black;
+            font-weight: bold;
+        }
         ion-progress-bar {
             width: 100%;
+            margin: 0;
+            --ion-color-base: #00D2FF !important;
+            --border-radius: 5px;
         }
         p {
             color: #838383;

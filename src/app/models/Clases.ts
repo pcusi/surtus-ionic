@@ -6,6 +6,7 @@ export class Clase {
         public percent?: number,
         public idMod?: number,
         public idCla?: number,
-        public titulo?: string
+        public titulo?: string,
+        public is_view?: number
     ) { }
 }

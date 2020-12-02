@@ -1,17 +1,19 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons class="menu-global" (click)="toggleMenu()">
+      <ion-icon name="menu" class="icon-menu"></ion-icon>
+    </ion-buttons>
+    <ion-title>Nivel {{lvl}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <app-menu></app-menu>
   <div class="modules-content">
-    <h3>Nivel Actual: - {{lvl}}</h3>
-    <ion-grid>
-      <ion-row>
-        <ion-col *ngFor="let m of modules; let i = index;" size="6"
-        [ngClass]="m.is_locked == 1 ? 'modules-list' : 'modules-list-locked'">
-          <img src="assets/icon/unlock.svg" *ngIf="m.is_locked == 1; else locked" class="modules-icon">
-          <ng-template #locked>
-            <img src="assets/icon/lock.svg" class="modules-icon">
-          </ng-template>
+    <ion-grid class="ion-wrap">
+      <ion-row class="module-row">
+        <ion-col *ngFor="let m of modules; let i = index;" [routerLink]="['/clases', m.idMod]"
+        class="modules-list" size="12">
           <p class="module-name">{{m.name}}</p>
-          <ion-badge [color]="m.is_locked == 0 ? 'danger' : 'success'">{{m.is_locked == 0 ? 'Bloqueado' : 'Desbloqueado'}}</ion-badge>
         </ion-col>
       </ion-row>
     </ion-grid>

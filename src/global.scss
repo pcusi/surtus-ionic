@@ -33,3 +33,39 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.header {
+    --background: #387ed6;
+    color: white;
+    text-align: center;
+}
+
+
+.menu-global {
+    position: relative;
+    left: 15px;
+    top: 20px;
+    .icon-menu {
+        font-size: 24px;
+    }
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    ion-item {
+        --border-color: none;
+        --border: none;
+        --inner-border-width: 0px;
+    }
+
+    ion-button {
+        --background: none;
+        --color: black;
+        --box-shadow: none;
+        --font-size: 2em;
+    }
+}
+

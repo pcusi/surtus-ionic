@@ -1,13 +1,45 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons class="menu-global" (click)="toggleMenu()">
+      <ion-icon name="menu" class="icon-menu"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-menu-toggle>
+  <ion-menu side="start" contentId="my-main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let i of opts | async">
+        <div class="menu-items">
+          <ion-item>
+            {{i.names}}
+          </ion-item>
+          <ion-button [routerLink]="i.redirect">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-menu-toggle>
+
 <ion-content>
-  <app-menu></app-menu>
   <div class="modules-content">
-    <h3>{{title}}</h3>
     <ion-grid class="classes">
       <ion-row class="classes-row">
         <ion-col size="6" *ngFor="let i of clases" class="classes-col">
-          <ion-img src="{{i.image}}" width="80" height="80"></ion-img>
+          <ion-img src="{{i.image}}" width="80" height="80"
+                   [ngStyle]="i.is_view == 0 ? {'filter' : 'blur(3px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))'}
+        : {'filter' : 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))'}"></ion-img>
           <h2 class="class-name">{{i.name}}</h2>
-          <ion-button (click)="startVideo(i.video)" *ngIf="i.video != ''">
+          <ion-button (click)="startVideo(i.video)" *ngIf="i.video != null">
             <ion-icon name="eye-outline"></ion-icon>
           </ion-button>
         </ion-col>
