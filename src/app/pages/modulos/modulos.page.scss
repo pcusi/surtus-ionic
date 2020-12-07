@@ -5,21 +5,43 @@
     font-weight: bold;
   }
   // only if col is unlocked
-  .modules-list {
-    background: linear-gradient(90deg, #397FD6 0%, #74ADFF 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 15px;
-    border-radius: 5px;
-    .modules-icon {
-      width: 24px;
-      height: 24px;
-      align-items: start !important;
-    }
-    .module-name {
-      text-align: center;
-      font-weight: bold;
-      color: white;
-      text-align: center;
+  .module-row {
+    .modules-list {
+      background: linear-gradient(90deg, #397FD6 0%, #74ADFF 100%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 0 0px 10px 0;
+      height: 60px;
+      border-radius: 5px;
+      &:hover {
+        outline: none;
+        box-shadow: none;
+      }
+      .modules-icon {
+        width: 24px;
+        height: 24px;
+        align-items: start !important;
+      }
+      .module-name {
+        position: relative;
+        z-index: 5;
+        left: 15px;
+        font-weight: bold;
+        color: white;
+      }
+      .module-badge {
+        position: relative;
+        z-index: 5;
+        bottom: 10px;
+        left: 15px;
+        font-size: 10px;
+      }
+      .lineas {
+        position: relative;
+        z-index: 1;
+        bottom: 145px;
+        left: 5px;
+        width: 100%;
+      }
     }
   }
 }

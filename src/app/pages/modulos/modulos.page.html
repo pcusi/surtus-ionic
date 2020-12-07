@@ -3,19 +3,63 @@
     <ion-buttons class="menu-global" (click)="toggleMenu()">
       <ion-icon name="menu" class="icon-menu"></ion-icon>
     </ion-buttons>
-    <ion-title>Nivel {{lvl}}</ion-title>
+    <ion-title *ngIf="lvl; else allModules">Nivel {{lvl}}</ion-title>
+    <ng-template #allModules>
+      <ion-title>Módulos</ion-title>
+    </ng-template>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-menu-toggle>
+  <ion-menu side="start" contentId="my-main" swipeGesture="false">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let i of opts | async">
+        <div class="menu-items">
+          <ion-item>
+            {{i.names}}
+          </ion-item>
+          <ion-button [routerLink]="i.redirect">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-menu-toggle>
+
 <ion-content>
   <div class="modules-content">
-    <ion-grid class="ion-wrap">
+    <ion-grid *ngIf="lvl; else isModule">
       <ion-row class="module-row">
-        <ion-col *ngFor="let m of modules; let i = index;" [routerLink]="['/clases', m.idMod]"
-        class="modules-list" size="12">
-          <p class="module-name">{{m.name}}</p>
+        <ion-col size="6" *ngFor="let m of modules; let i = index;" [routerLink]="['/clases', m.idMod]">
+          <ion-card class="modules-list" >
+            <p class="module-name">{{m.name}}</p>
+            <img src="assets/images/lineas.svg" class="lineas">
+            <ion-badge>Holi</ion-badge>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
+    <ng-template #isModule>
+      <ion-grid>
+        <ion-row class="module-row">
+          <ion-col size="6" *ngFor="let m of modules; let i = index;" [routerLink]="m.is_locked == 1 ? ['/clases', m.idMod] : []">
+            <ion-card class="modules-list">
+              <p class="module-name">{{m.name}}</p>
+              <ion-badge class="module-badge" [color]="m.is_locked == 1 ? 'success': 'danger'">
+                {{m.is_locked == 1 ? 'Desbloqueado' : 'Bloqueado'}}
+              </ion-badge>
+              <img src="assets/images/lineas.svg" class="lineas">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ng-template>
   </div>
 </ion-content>

@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/modulos/modulos.module').then( m => m.ModulosPageModule)
   },
   {
+    path: 'modulos',
+    loadChildren: () => import('./pages/modulos/modulos.module').then( m => m.ModulosPageModule )
+  },
+  {
     path: 'clases/:id',
     loadChildren: () => import('./pages/clases/clases.module').then( m => m.ClasesPageModule)
   },
@@ -38,6 +42,14 @@ const routes: Routes = [
   {
     path: 'glosario',
     loadChildren: () => import('./pages/glosario/glosario.module').then( m => m.GlosarioPageModule)
+  },
+  {
+    path: 'aprendizaje',
+    loadChildren: () => import('./pages/aprendizaje/aprendizaje.module').then( m => m.AprendizajePageModule)
+  },
+  {
+    path: 'retos-modal',
+    loadChildren: () => import('./modals/retos-modal/retos-modal.module').then( m => m.RetosModalPageModule)
   },
 ];
 

@@ -31,7 +31,11 @@ export class ModulosPage implements OnInit {
   ngOnInit() {
     this._ar.params.subscribe(params => {
       const lvl = params.level;
-      this.getModuleByLevel(lvl);
+      if (lvl) {
+        this.getModuleByLevel(lvl);
+      } else {
+        this.getModules();
+      }
     });
     this.opts = this._menu.getMenu();
   }
@@ -40,6 +44,12 @@ export class ModulosPage implements OnInit {
     this._m.getModuleByLevel(lvl).subscribe(data => {
       this.modules = data.modulos;
       this.lvl = data.lvl;
+    });
+  }
+
+  getModules() {
+    this._m.getModules().subscribe(data => {
+      this.modules = data.modulos;
     });
   }
 

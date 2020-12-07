@@ -1,0 +1,29 @@
+{
+    "aprendizaje": [
+      {
+        "img_one": "assets/images/señas/col.png",
+        "img_two": "assets/images/señas/pelota.png",
+        "text_one": "Col",
+        "text_two": "Pelota"
+      },
+      {
+        "img_one": "assets/images/señas/trabajo.png",
+        "img_two": "assets/images/señas/zapato.png",
+        "text_one": "Trabajo",
+        "text_two": "Zapato"
+      },
+      {
+        "img_one": "assets/images/señas/quien.png",
+        "img_two": "assets/images/señas/equivocarse.png",
+        "text_one": "¿Quién?",
+        "text_two": "Equivocarse"
+      },
+      {
+        "img_one": "assets/images/señas/papa.png",
+        "img_two": "assets/images/señas/leer.png",
+        "text_one": "Papá",
+        "text_two": "Leer"
+      }
+    ]
+}
+

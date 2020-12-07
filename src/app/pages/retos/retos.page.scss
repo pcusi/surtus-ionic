@@ -1,3 +1,5 @@
+@import 'src/theme/variables';
+
 .menu-items {
     display: flex;
     flex-direction: row;
@@ -64,6 +66,10 @@
     padding: 1rem;
     top: 15px;
 
+    .challenge-text {
+        color: $text-gray;
+    }
+
     .challenge-add {
         margin: 1rem 0;
         display: flex;
@@ -72,7 +78,7 @@
         align-items: center;
         width: 100%;
         min-height: 100px;
-        background: linear-gradient(90deg, #00D2FF 0%, #3A7BD5 100%);
+        background: linear-gradient(90deg, $bg-blue 0%, #74ADFF 100%);
         border-radius: 25px;
 
         .add-icon {

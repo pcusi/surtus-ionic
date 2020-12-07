@@ -16,46 +16,48 @@
         margin: 1.5rem 0;
     }
 
-    .home-grid {
-        .home-col {
-            background: linear-gradient(90deg, #397FD6 0%, #74ADFF 100%);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            margin: 0 0 1.5rem 0;
-            min-height: 100px;
+    .home-slide {
+        .home-grid {
+            .home-col {
+                background: linear-gradient(90deg, #397FD6 0%, #74ADFF 100%);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                margin: 0 0 1.5rem 0;
+                height: 150px;
 
-            .inside-col {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                .inside-col {
+                    display: flex;
+                    flex-direction: column;
 
-                h1 {
-                    color: white;
-                    font-weight: bold;
-                    font-size: 1.2em;
-                    text-align: center;
+                    h1 {
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1em;
+                        text-align: center;
+                    }
+                    .button-col {
+                        min-height: 25px;
+                        border-radius: 8px;
+                    }
+                    .button-col:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
                 }
-                .button-col {
-                    min-height: 25px;
-                    border-radius: 8px;
-                }
-                .button-col:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
 
-            .inside-img {
-                .home-image {
-                    position: absolute;
-                    z-index: 5;
-                    left: 10%;
-                    bottom: -12%;
+                .inside-img {
+                    .home-image {
+                        position: relative;
+                        z-index: 5;
+                        left: 10%;
+                        bottom: 10%;
+                    }
                 }
             }
         }
+        //
     }
-//
+
     h5 {
         color: #605E5E;
         text-align: center;

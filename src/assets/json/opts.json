@@ -4,6 +4,10 @@
         "redirect": "/principal"
     },
     {
+        "names": "Módulos",
+        "redirect": "/modulos"
+    },
+    {
         "names": "Retos",
         "redirect": "/retos"
     },
@@ -14,5 +18,9 @@
     {
         "names": "¿Cómo ser intérprete?",
         "redirect": "/guia"
+    },
+    {
+        "names": "Configuración",
+        "redirect": "/configuracion"
     }
 ]

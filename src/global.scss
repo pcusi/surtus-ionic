@@ -50,6 +50,10 @@ body {
     }
 }
 
+:focus {
+    outline: none;
+}
+
 .menu-items {
     display: flex;
     flex-direction: row;

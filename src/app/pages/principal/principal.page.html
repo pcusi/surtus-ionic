@@ -5,27 +5,52 @@
     <ion-searchbar class="menu-search" placeholder="¿Qué quieres aprender?"></ion-searchbar>
 
     <h1>Sugerencias</h1>
-
-    <ion-grid class="home-grid">
-<!--      -->
-      <ion-row>
-        <ion-col size="12" class="home-col" *ngFor="let i of modules | slice: 0:1">
-          <ion-grid>
-            <ion-row>
-              <ion-col size="6" class="inside-col">
-                <h1>Nivel {{i.level}}</h1>
-                <button class="button-col" [routerLink]="['/modulos/', i.level]">
-                  Aprender
-                </button>
-              </ion-col>
-              <ion-col size="6" class="inside-img">
-                <img src="{{i.image}}" class="home-image">
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <!-- empieza los slides -->
+    <ion-slides>
+      <ion-slide class="home-slide">
+        <ion-grid class="home-grid">
+          <ion-row>
+            <ion-col size="12" class="home-col">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6" class="inside-col">
+                    <h1>Guía de aprendizaje</h1>
+                    <button class="button-col" routerLink="/aprendizaje">
+                      Visualizar
+                    </button>
+                  </ion-col>
+                  <ion-col size="6" class="inside-img">
+                    <img src="https://res.cloudinary.com/doozucb0w/image/upload/v1604444923/se%C3%B1as/se%C3%B1as-2_olqcdf.svg" class="home-image">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide class="home-slide">
+        <ion-grid class="home-grid">
+          <ion-row>
+            <ion-col size="12" class="home-col" *ngFor="let i of modules | slice: 0:1">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6" class="inside-col">
+                    <h1>Nivel {{i.level}}</h1>
+                    <button class="button-col" [routerLink]="['/modulos/', i.level]">
+                      Aprender
+                    </button>
+                  </ion-col>
+                  <ion-col size="6" class="inside-img">
+                    <img src="{{i.image}}" class="home-image">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+    <!-- termina los slides -->
 
 <!--  termina  -->
   <h5>¿Quieres retar tu capacidad como intérprete?</h5>

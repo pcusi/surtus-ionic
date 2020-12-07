@@ -14,4 +14,9 @@ export class MenuService {
   getMenu() {
     return this.http.get<Menu[]>('assets/json/opts.json');
   }
+
+  getLearning() {
+    return this.http.get('assets/json/aprendizaje.json');
+  }
+
 }
