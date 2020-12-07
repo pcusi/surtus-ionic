@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {Menu} from '../../models/menu';
 import {RetosModalPage} from "../../modals/retos-modal/retos-modal.page";
+import { IonRouterOutlet } from '@ionic/angular';
 
 @Component({
   selector: 'app-retos',
@@ -20,7 +21,8 @@ export class RetosPage implements OnInit {
       private _menu: MenuService,
       private router: Router,
       private _modal: ModalController,
-      private _alert: AlertController
+      private _alert: AlertController,
+      private routerOutlet: IonRouterOutlet
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,8 @@ export class RetosPage implements OnInit {
     const modal = await this._modal.create({
       component: RetosModalPage,
       cssClass: 'new-modal',
-      swipeToClose: true
+      swipeToClose: true,
+      presentingElement: this.routerOutlet.nativeEl
     });
     return await modal.present();
   }

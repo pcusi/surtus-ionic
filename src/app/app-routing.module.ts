@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'onboarding',
+    redirectTo: 'iniciar',
     pathMatch: 'full'
   },
   {
@@ -50,6 +50,14 @@ const routes: Routes = [
   {
     path: 'retos-modal',
     loadChildren: () => import('./modals/retos-modal/retos-modal.module').then( m => m.RetosModalPageModule)
+  },
+  {
+    path: 'inscripcion',
+    loadChildren: () => import('./pages/inscripcion/inscripcion.module').then( m => m.InscripcionPageModule)
+  },
+  {
+    path: 'iniciar',
+    loadChildren: () => import('./pages/iniciar/iniciar.module').then( m => m.IniciarPageModule)
   },
 ];
 

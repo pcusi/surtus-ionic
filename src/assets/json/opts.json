@@ -20,7 +20,7 @@
         "redirect": "/guia"
     },
     {
-        "names": "Configuración",
-        "redirect": "/configuracion"
+        "names": "Realidad aumentada (beta)",
+        "redirect": "/"
     }
 ]
