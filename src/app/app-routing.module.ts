@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {InscritoGuard} from "./guards/inscrito.guard";
 
 const routes: Routes = [
   {
     path: 'principal',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/principal/principal.module').then( m => m.PrincipalPageModule)
   },
   {
@@ -13,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'retos',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/retos/retos.module').then( m => m.RetosPageModule)
   },
   {
@@ -21,6 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'modulos',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/modulos/modulos.module').then( m => m.ModulosPageModule )
   },
   {
@@ -29,26 +33,32 @@ const routes: Routes = [
   },
   {
     path: 'guia',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/guia/guia.module').then( m => m.GuiaPageModule)
   },
   {
     path: 'onboarding',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/onboarding/onboarding.module').then( m => m.OnboardingPageModule)
   },
   {
     path: 'loading',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
   },
   {
     path: 'glosario',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/glosario/glosario.module').then( m => m.GlosarioPageModule)
   },
   {
     path: 'aprendizaje',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./pages/aprendizaje/aprendizaje.module').then( m => m.AprendizajePageModule)
   },
   {
     path: 'retos-modal',
+    canActivate: [InscritoGuard],
     loadChildren: () => import('./modals/retos-modal/retos-modal.module').then( m => m.RetosModalPageModule)
   },
   {

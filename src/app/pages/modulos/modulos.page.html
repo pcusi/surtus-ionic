@@ -35,6 +35,9 @@
 
 <ion-content>
   <div class="modules-content">
+
+    <ion-spinner *ngIf="this.modules.length < 1" class="loading"></ion-spinner>
+
     <ion-grid *ngIf="lvl; else isModule">
       <ion-row class="module-row">
         <ion-col size="6" *ngFor="let m of modules; let i = index;" [routerLink]="['/clases', m.idMod]">
@@ -46,6 +49,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+    <!-- modulo sin nivel -->
     <ng-template #isModule>
       <ion-grid>
         <ion-row class="module-row">

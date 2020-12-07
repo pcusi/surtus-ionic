@@ -16,8 +16,9 @@ import {Menu} from "../../models/menu";
   encapsulation: ViewEncapsulation.None
 })
 export class ModulosPage implements OnInit {
-  public modules: Modulo[];
+  public modules: Modulo[] = [];
   public lvl: any;
+  isLoading = false;
   opts: Observable<Menu[]>;
 
   constructor(
@@ -49,7 +50,12 @@ export class ModulosPage implements OnInit {
 
   getModules() {
     this._m.getModules().subscribe(data => {
-      this.modules = data.modulos;
+      if (data) {
+        this.modules = data.modulos;
+        this.isLoading = false;
+      } else {
+        this.isLoading = true;
+      }
     });
   }
 

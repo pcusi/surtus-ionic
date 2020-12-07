@@ -1,5 +1,16 @@
+@import 'src/theme/variables';
+
 .modules-content {
   padding: 0.5rem 1.5rem;
+
+  .loading {
+    display: block;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    color: $bg-blue;
+  }
 
   h3 {
     font-weight: bold;
@@ -24,8 +35,9 @@
       .module-name {
         position: relative;
         z-index: 5;
-        left: 15px;
+        font-size: 16px;
         font-weight: bold;
+        text-align: center;
         color: white;
       }
       .module-badge {

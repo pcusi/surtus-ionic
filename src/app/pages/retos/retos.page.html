@@ -36,9 +36,23 @@
       <ion-icon name="add-outline" class="add-icon"></ion-icon>
       <h6 class="add-text">Crear reto</h6>
     </div>
-    <ion-text>
-      <h3 class="challenge-text">Retos actuales</h3>
-    </ion-text>
+    <div class="user-challenges" *ngIf="challenges.length >= 1; else noChallenges">
+      <ion-text>
+        <h3 class="challenge-text">Retos actuales</h3>
+      </ion-text>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let ch of challenges">
+            <ion-card class="user-challenges-card">
+              <p class="challenge-name">{{ch.name}}</p>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ng-template #noChallenges>
+      <ion-spinner class="loading"></ion-spinner>
+    </ng-template>
     <div class="challenge-score">
       <ion-text>
         <h3 class="challenge-text">Puntaje de retos</h3>

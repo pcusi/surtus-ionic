@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Modulo } from 'src/app/models/Modulo';
 import { ModulesService } from 'src/app/services/modules.service';
+import {OtherService} from "../../services/other.service";
 
 @Component({
   selector: 'app-principal',
@@ -8,12 +9,15 @@ import { ModulesService } from 'src/app/services/modules.service';
   styleUrls: ['./principal.page.scss'],
 })
 export class PrincipalPage implements OnInit {
-
+  public identity: [];
   public modules: Modulo[] = [];
 
   constructor(
-    private _m: ModulesService
-  ) { }
+    private _m: ModulesService,
+    private _o: OtherService
+  ) {
+    this.identity = this._o.getIdentity();
+  }
 
   ngOnInit() {
     this.getModules();
