@@ -34,6 +34,9 @@ export class ClasesPage implements OnInit {
     this._ar.params.subscribe(params => {
       let id = params.id;
       this.getClassByModuleId(id);
+      this._c._refreshClass.subscribe(() => {
+        this.getClassByModuleId(id);
+      });
     });
     this.opts = this._menu.getMenu();
   }
@@ -46,7 +49,7 @@ export class ClasesPage implements OnInit {
   }
 
   startVideo(video: any) {
-    if (this.platform.is('cordova')) {
+    if (this.platform.is('android')) {
       this._v.play(video).then(() => {
         console.log(video);
       }).catch(err => {
@@ -55,6 +58,15 @@ export class ClasesPage implements OnInit {
     } else {
       console.log('No cordova')
     }
+  }
+
+  classView(id: any) {
+    console.log(id);
+    this._c.classView(id).subscribe(data => {
+      if (data) console.log(data);
+    }, err => {
+      console.log(err);
+    });
   }
 
   toggleMenu() {

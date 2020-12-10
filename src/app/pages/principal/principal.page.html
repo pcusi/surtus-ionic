@@ -53,20 +53,13 @@
     <!-- termina los slides -->
 
 <!--  termina  -->
-  <h5>¿Quieres retar tu capacidad como intérprete?</h5>
-  <h4>Completa al menos un 30% de un módulo que hayas visualizado.</h4>
+  <h5>Módulos</h5>
 
 <!-- slides card retos archivados -->
     <ion-grid class="ion-wrap">
       <ion-row class="history-modules">
-        <ion-col class="history-col">
-          <p>Abecedario</p>
-        </ion-col>
-        <ion-col class="history-col">
-          <p>Saludos</p>
-        </ion-col>
-        <ion-col class="history-col">
-          <p>Modales</p>
+        <ion-col class="history-col" *ngFor="let m of three" [routerLink]="['/clases', m.idMod]">
+          <p>{{m.name}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>

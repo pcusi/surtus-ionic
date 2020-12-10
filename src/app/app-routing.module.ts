@@ -69,6 +69,10 @@ const routes: Routes = [
     path: 'iniciar',
     loadChildren: () => import('./pages/iniciar/iniciar.module').then( m => m.IniciarPageModule)
   },
+  {
+    path: 'ar',
+    loadChildren: () => import('./pages/ar/ar.module').then( m => m.ArPageModule)
+  },
 ];
 
 @NgModule({

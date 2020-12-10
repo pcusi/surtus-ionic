@@ -8,13 +8,15 @@ import { ClasesPageRoutingModule } from './clases-routing.module';
 
 import { ClasesPage } from './clases.page';
 import { MenuComponent } from 'src/app/shared/menu/menu.component';
+import {NgxIonicImageViewerModule} from "ngx-ionic-image-viewer";
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        ClasesPageRoutingModule
+        ClasesPageRoutingModule,
+        NgxIonicImageViewerModule
     ],
     exports: [
         MenuComponent

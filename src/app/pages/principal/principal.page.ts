@@ -11,6 +11,7 @@ import {OtherService} from "../../services/other.service";
 export class PrincipalPage implements OnInit {
   public identity: [];
   public modules: Modulo[] = [];
+  public three: [] = [];
 
   constructor(
     private _m: ModulesService,
@@ -21,6 +22,7 @@ export class PrincipalPage implements OnInit {
 
   ngOnInit() {
     this.getModules();
+    this.getThreeModules();
   }
 
   getModules() {
@@ -30,4 +32,11 @@ export class PrincipalPage implements OnInit {
       }
     });
   }
+
+  getThreeModules() {
+    return this._m.getThreeModules().subscribe(data => {
+      this.three = data.modulos;
+    });
+  }
+
 }

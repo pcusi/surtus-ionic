@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -22,6 +23,11 @@ export class OtherService {
   getRequest(params: any): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this._http.get(environment.api + params, { headers });
+  }
+
+  putRequest(params: any, body?:any): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this._http.put(environment.api + params, JSON.stringify(body),{ headers });
   }
 
   getRequestToken(params:any, token?:string) {

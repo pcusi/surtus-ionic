@@ -14,6 +14,10 @@ export class ModulesService {
     return this._o.getRequest('/modules');
   }
 
+  getThreeModules() {
+    return this._o.getRequest('/three-modules');
+  }
+
   getModuleByLevel(level) {
     return this._o.getRequest('/module-level/' + level);
   }
