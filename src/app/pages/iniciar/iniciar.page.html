@@ -1,0 +1,11 @@
+<ion-content>
+  <div class="insc">
+    <h6>Inscripción</h6>
+      <form class="form-insc" #insLogin="ngForm" (ngSubmit)="login(insLogin)">
+        <ion-input placeholder="Tu usuario" class="insc-input" name="username" [(ngModel)]="inscritos.username" required></ion-input>
+        <ion-input placeholder="Tu contraseña" type="password" class="insc-input" name="password" [(ngModel)]="inscritos.password" required></ion-input>
+        <ion-button type="submit" class="insc-btn" [disabled]="!insLogin.valid">Ingresar</ion-button>
+      </form>
+    <button class="register-btn" routerLink="/inscripcion">Inscribirse</button>
+  </div>
+</ion-content>

@@ -1,0 +1,103 @@
+.onboard-content {
+  .onboard-one {
+    background: linear-gradient(90deg, #387Ed6 50%, #fff 50%);
+    .clip-path-top {
+      z-index: 5;
+      top: 0;
+      position: absolute;
+      background: #387ED6;
+      width: 100%;
+      border-bottom-right-radius: 125px;
+      min-height: 180px;
+      h1 {
+        padding: 1rem 2rem;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+    .clip-path-bot {
+      position: relative;
+      z-index: 1;
+      top: 180px;
+      border-top-left-radius: 125px;
+      background: white;
+      width: 100%;
+      height: 100vh;
+      .img-clip {
+        display: block;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+      }
+    }
+
+  }
+  .onboard-two {
+    background: linear-gradient(90deg, #fff 50%, #387Ed6 50%);
+    .clip-path-top {
+      z-index: 5;
+      top: 0;
+      position: absolute;
+      background: #fff;
+      width: 100%;
+      border-bottom-right-radius: 125px;
+      min-height: 250px;
+      .img-clip {
+        display: block;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+      }
+    }
+    .clip-path-bot {
+      position: relative;
+      z-index: 1;
+      top: 250px;
+      border-top-left-radius: 125px;
+      background: #387Ed6;
+      width: 100%;
+      height: 100vh;
+      h1 {
+        padding: 4rem 4rem;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+  }
+  .onboard-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #387ED6;
+    height: 100vh;
+
+    h1, p {
+      padding: 0 1rem;
+    }
+
+    h1 {
+      color: white;
+      font-size: 48px;
+    }
+    p {
+      color: white;
+    }
+    .btn-start {
+      --background: none;
+      --box-shadow: none;
+      border: 1px solid #fff;
+      border-radius: 30px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}

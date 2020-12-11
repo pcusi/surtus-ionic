@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="modal-challenge-content">
+    <form class="challenge-form" #retoForm="ngForm" (ngSubmit)="newChallenge(retoForm)">
+      <h3>Agregar reto</h3>
+      <p>Nivel Básico</p>
+        <div class="challenge-group">
+          <ion-label>Nombre del reto</ion-label>
+          <ion-input class="challenge-input" placeholder="Escribir nombre" name="name"
+                     [(ngModel)]="ch.name" required></ion-input>
+        </div>
+        <div class="challenge-group">
+          <ion-label>¿Qué módulo es?</ion-label>
+          <ion-input class="challenge-input" placeholder="Seleccione módulo" name="idMod"
+                     [(ngModel)]="ch.idMod" required></ion-input>
+        </div>
+      <ion-button type="submit" class="btn-save" [disabled]="!retoForm.valid">Guardar</ion-button>
+    </form>
+  </div>
+</ion-content>

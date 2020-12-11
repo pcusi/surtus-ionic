@@ -1,0 +1,144 @@
+@import "src/theme/variables";
+
+.aprendizaje-content {
+  padding: 0.5rem 1.5rem;
+  h3 {
+    color: $text-gray;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  h6 {
+    color: $text-dark;
+    text-align: center;
+  }
+  .aprendizaje__one {
+    margin: 0 0 20px 0;
+    p {
+      color: $text-dark;
+    }
+  }
+  .aprendizaje__layout {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .aprendizaje__box {
+      position: absolute;
+      right: 30px;
+      ul {
+        position: relative;
+        top: 10px;
+      }
+      ul li {
+        list-style-type: none;
+      }
+      ul li a {
+        color: $text-gray;
+      }
+    }
+  }
+  .aprendizaje__box__one {
+    position: relative;
+    bottom: 108px;
+    margin-bottom: -75px;
+    border-radius: 10px;
+    background: $bg-blue;
+    width: 50%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    p {
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .aprendizaje__layout__two {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .aprendizaje__box__two {
+      position: absolute;
+      left: 0;
+      ul {
+        position: relative;
+      }
+      ul li {
+        list-style-type: none;
+      }
+      ul li a {
+        color: $text-gray;
+        text-align: right;
+      }
+    }
+  }
+
+  .aprendizaje__box__three {
+    position: relative;
+    bottom: 108px;
+    margin-bottom: -75px;
+    left: 182px;
+    border-radius: 10px;
+    background: $bg-blue;
+    width: 50%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    p {
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .aprendizaje__cards {
+    margin-bottom: 45px;
+    .aprendizaje__card {
+      ion-grid {
+        padding: 0;
+      }
+    }
+    .card__bottom {
+      background: $bg-blue;
+      width: 100%;
+      height: 50px;
+      p {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .ejercicios {
+      ion-card {
+        margin: 0;
+        padding: 5px;
+      }
+      .ejercicios-text {
+        text-align: justify;
+        color: $text-dark;
+      }
+  }
+
+  .feedback {
+    h6 {
+      color: $text-dark;
+      text-align: start;
+    }
+    .feedback-input {
+      border: 1px solid #C8C8C8;
+      box-sizing: border-box;
+    }
+  }
+
+}

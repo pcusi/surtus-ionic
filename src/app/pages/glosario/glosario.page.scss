@@ -1,0 +1,32 @@
+.glosario-content {
+  position: relative;
+  top: 15px;
+  padding: 0 1.5rem;
+
+  .menu-search {
+    background: none;
+    --background: #fff;
+    --color: #121212;
+    --border-radius: 15px;
+  }
+
+  .word__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .word__box {
+      margin-top: 1rem;
+      border: 1px solid #BDBDBD;
+      width: 350px;
+      height: 300px;
+    }
+    .word__bottom {
+      background: #387ED6;
+      width: 350px;
+      height: 60px;
+      border-radius: 0px 0px 20px 20px;
+    }
+  }
+
+}

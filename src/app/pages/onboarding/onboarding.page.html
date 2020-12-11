@@ -1,0 +1,31 @@
+<ion-content class="onboard-content">
+  <ion-slides pager="true" #slides [options]="slideOpts" (ionSlideDidChange)="getIndex($event)">
+    <ion-slide class="onboard-one">
+      <div class="clip-path-top">
+        <h1>Podrás convertirte en un intérprete del lenguaje de señas, en poco tiempo.</h1>
+      </div>
+      <div class="clip-path-bot">
+        <ion-img src="assets/images/hand_img.svg" class="img-clip"></ion-img>
+      </div>
+    </ion-slide>
+    <ion-slide class="onboard-two">
+      <div class="clip-path-top">
+        <ion-img src="assets/images/hand_img_two.svg" class="img-clip"></ion-img>
+      </div>
+      <div class="clip-path-bot">
+        <h1>Sé parte de Surtus, y comienza a ser uno del millón de personas en el Perú, que ayude a la comunidad de personas sordas.</h1>
+      </div>
+    </ion-slide>
+    <ion-slide class="onboard-three">
+      <ion-img src="https://res.cloudinary.com/doozucb0w/image/upload/c_scale,e_loop:100,w_300/v1606868630/se%C3%B1as/iniciar_tsn9qw.gif" class="img-clip"></ion-img>
+      <h1>Surtus</h1>
+      <p>Te enseñaremos a comunicarte en señas, en poco tiempo.</p>
+      <ion-button class="btn-start" *ngIf="currentIndex === 2" [routerLink]="['/loading']">Comenzar</ion-button>
+    </ion-slide>
+  </ion-slides>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="currentIndex != 2">
+    <ion-fab-button>
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
